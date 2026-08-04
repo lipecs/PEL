@@ -1,7 +1,7 @@
 <h1 align="center">PELPlugin</h1>
 
 <p align="center">
-  Minigame completo de <strong>Polícia e Ladrão</strong> desenvolvido para a network Hypnum.
+  Minigame completo de <strong>Polícia e Ladrão</strong> desenvolvido por Lipe.
 </p>
 
 <p align="center">
@@ -14,6 +14,8 @@
 ## Sobre o projeto
 
 O **PELPlugin** transforma o clássico Polícia e Ladrão em um minigame completo para servidores Minecraft. Policiais precisam capturar e impedir a fuga dos ladrões, enquanto os ladrões hackeiam objetivos, abrem rotas e tentam escapar antes do fim da partida.
+
+> O projeto levou cerca de três anos para ser desenvolvido, passando por diversas etapas de planejamento, programação, testes e melhorias até chegar à sua versão atual.
 
 O projeto não se limita à partida principal: ele possui múltiplos modos de jogo, kits, progressão, economia, cosméticos, missões, conquistas, salas personalizadas, modo história, criação visual de mapas e suporte a uma network com Velocity.
 
