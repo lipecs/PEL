@@ -1,2 +1,2 @@
-# Pol-cia-e-Ladr-o-PEL-
+# pOLICIA E LADRAO(PEL)
 Plugin de Policia e Ladrão
