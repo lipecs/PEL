@@ -6,7 +6,7 @@
 
 <p align="center">
   <img alt="Java 17" src="https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
-  <img alt="Paper 1.18.2" src="https://img.shields.io/badge/Paper-1.18.2-3C3C3C?style=for-the-badge&logo=paper&logoColor=white">
+  <img alt="Paper" src="https://img.shields.io/badge/Paper-3C3C3C?style=for-the-badge&logo=paper&logoColor=white">
   <img alt="Maven" src="https://img.shields.io/badge/Maven-3-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white">
   <img alt="MySQL e SQLite" src="https://img.shields.io/badge/Banco-MySQL%20%7C%20SQLite-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 </p>
@@ -135,7 +135,6 @@ O PEL utiliza o **Advanced SlimeWorldManager (ASWM)** para exportar templates e 
 - várias salas do mesmo mapa em uma única instância Paper;
 - descarte automático do mundo ao encerrar a sala;
 - limpeza de mundos temporários após reinicializações inesperadas;
-- preload de templates e chunks de preview;
 - proteção do mapa original contra alterações da partida.
 
 O setup é feito dentro do jogo com itens próprios para posições, spawns, regiões, objetivos, preview e jump pads.
@@ -145,48 +144,20 @@ O setup é feito dentro do jogo com itens próprios para posições, spawns, reg
 | Tecnologia | Uso no projeto |
 |---|---|
 | **Java 17** | Linguagem e runtime do plugin. |
-| **Paper API 1.18.2** | Eventos, entidades, inventários e integração com o servidor. |
+| **Paper API** | Eventos, entidades, inventários e integração com o servidor. |
 | **Maven** | Gerenciamento de dependências, build e empacotamento. |
-| **PacketEvents** | Manipulação eficiente de pacotes e equipamentos visuais. |
 | **ProtocolLib** | Compatibilidade com recursos baseados em pacotes. |
 | **Advanced SlimeWorldManager** | Templates e mundos temporários por partida. |
-| **SkinsRestorer API** | Aplicação e sincronização de skins. |
-| **LibsDisguises** | Disfarces e habilidade de metamorfose. |
-| **ParticleLib** | Efeitos de partículas. |
 | **HikariCP** | Pool de conexões com o banco de dados. |
 | **MySQL Connector/J** | Persistência compartilhada em MySQL. |
 | **SQLite JDBC** | Persistência local sem servidor de banco externo. |
-| **Velocity** | Comunicação global, troca de servidores e comandos da network. |
 
 ## Requisitos
 
 - Java 17.
 - Paper 1.18.2 compatível com a API `1.18.2-R0.1-SNAPSHOT`.
-- PacketEvents.
 - ProtocolLib.
 - Maven 3.8 ou superior para compilar.
-
-Dependências opcionais ou específicas de determinados recursos:
-
-- Advanced SlimeWorldManager para instâncias temporárias.
-- SkinsRestorer para skins.
-- LibsDisguises para metamorfose e disfarces.
-- MySQL para compartilhar perfis entre instâncias.
-- Módulos `pel-velocity` e `pel-lobby` para a integração completa da network.
-
-> Ao usar ASWM no Minecraft 1.18.2, instale uma versão compatível e inicie o Paper com o class modifier exigido por essa build.
-
-## Instalação
-
-1. Compile o projeto ou obtenha o JAR da versão desejada.
-2. Instale PacketEvents e ProtocolLib no servidor.
-3. Instale as dependências opcionais dos recursos que serão utilizados.
-4. Coloque `PELPlugin.jar` na pasta `plugins/`.
-5. Inicie o servidor uma vez para gerar as configurações.
-6. Configure o banco, ASWM, lobby e comunicação da network.
-7. Reinicie o servidor por completo.
-
-Para uma network com várias instâncias, utilize MySQL e mantenha as configurações de conexão iguais nos servidores que compartilham os perfis.
 
 ## Configuração
 
@@ -235,7 +206,6 @@ Para uma instalação simples, altere `type` para `sqlite`. O banco será criado
 | `/pel trails` | Abre a loja de trilhas. |
 | `/pel missoes` | Exibe as missões diárias e semanais. |
 | `/pel apostar <quantia>` | Realiza uma aposta na partida. |
-| `/pel report <jogador> <motivo>` | Envia um report para a equipe. |
 | `/pel stats [jogador]` | Exibe estatísticas detalhadas. |
 | `/pel titulo [nome]` | Lista ou seleciona um título. |
 | `/pel historico` | Abre o histórico de partidas. |
@@ -275,8 +245,6 @@ Com a integração do proxy ativa, `/entrar <código>` acessa salas por código 
 | `/pel crate` / `/pel removecrate` | Cria ou remove uma caixa misteriosa. |
 | `/pel givekey <jogador> <quantia>` | Entrega chaves de caixa. |
 | `/pel spraygive <arquivo> [jogador]` | Entrega um spray PNG ou GIF. |
-| `/pel reports` / `/pel resolve <id>` | Gerencia reports pendentes. |
-| `/pel ban` / `/pel unban` | Gerencia o banimento interno do minigame. |
 | `/pel hb` | Habilita ou desabilita as filas. |
 | `/pel reload` | Recarrega as configurações principais. |
 
@@ -288,50 +256,11 @@ Comandos de teste, depuração e manutenção também existem, mas devem ser uti
 |---|---|---|
 | `pel.admin` | Acesso à administração, setup e manutenção do minigame. | OP |
 
-Na infraestrutura Hypnum, tags de staff também podem conceder dinamicamente o acesso administrativo.
-
-## Compilação
-
-Clone o projeto e execute:
-
-```bash
-mvn clean package
-```
-
-O artefato será gerado em:
-
-```text
-target/PELPlugin-1.0-SNAPSHOT.jar
-```
-
-O Maven Shade empacota HikariCP, drivers JDBC e bibliotecas internas necessárias. Dependências marcadas como `provided`, como Paper, PacketEvents e ProtocolLib, devem estar disponíveis no servidor.
-
-## Estrutura do código
-
-```text
-src/main/java/com/pel/plugin/
-├── commands/   # comandos de jogador e administração
-├── core/       # ciclo de vida e carregamento dos módulos
-├── data/       # perfis e persistência
-├── effects/    # efeitos cosméticos e visuais
-├── game/       # arena, regras, times e modos
-├── gui/        # inventários e menus
-├── listeners/  # eventos do Bukkit/Paper
-├── managers/   # sistemas de progressão, kits e partidas
-├── network/    # comunicação com lobby e proxy
-├── setup/      # criação de mapas dentro do jogo
-├── sidebar/    # scoreboards
-├── story/      # modo história
-├── utils/      # utilitários compartilhados
-└── web/        # API da loja web
-```
-
 ## Autor
 
-Desenvolvido por **Lipe** para a **Hypnum Network**.
+Desenvolvido por **Lipe**
 
 - GitHub: [github.com/lipecs](https://github.com/lipecs)
-- Servidor: `hypnum.com.br`
 
 ## Licença
 
