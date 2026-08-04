@@ -1,8 +1,9 @@
 <h1 align="center">PELPlugin</h1>
 
 <p align="center">
-  Minigame completo de <strong>Polícia e Ladrão</strong> desenvolvido por Lipe.
+  Minigame completo de <strong>Polícia e Ladrão</strong>, desenvolvido por Lipe e inspirado na clássica série de <strong>Polícia e Ladrão do AuthenticGames</strong>.
 </p>
+
 
 <p align="center">
   <img alt="Java 17" src="https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
