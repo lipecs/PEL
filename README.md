@@ -260,6 +260,8 @@ Comandos de teste, depuração e manutenção também existem, mas devem ser uti
 
 Desenvolvido por **Lipe**
 
+> O projeto está à venda. Estou aberto a propostas e negociações de pessoas realmente interessadas.
+
 - GitHub: [github.com/lipecs](https://github.com/lipecs)
 
 ## Licença
