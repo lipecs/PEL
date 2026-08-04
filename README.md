@@ -17,8 +17,6 @@ O **PELPlugin** transforma o clássico Polícia e Ladrão em um minigame complet
 
 O projeto não se limita à partida principal: ele possui múltiplos modos de jogo, kits, progressão, economia, cosméticos, missões, conquistas, salas personalizadas, modo história, criação visual de mapas e suporte a uma network com Velocity.
 
-> Este repositório contém o servidor do minigame PEL. Recursos globais como proxy, lobby principal, login e party são módulos separados da infraestrutura Hypnum.
-
 ## Principais funcionalidades
 
 - Partidas automáticas com times de **Policiais**, **Ladrões** e **Espectadores**.
@@ -155,7 +153,7 @@ O setup é feito dentro do jogo com itens próprios para posições, spawns, reg
 ## Requisitos
 
 - Java 17.
-- Paper 1.18.2 compatível com a API `1.18.2-R0.1-SNAPSHOT`.
+- Compatível com Paper da versão 1.8.9 até a 1.21.1.
 - ProtocolLib.
 - Maven 3.8 ou superior para compilar.
 
