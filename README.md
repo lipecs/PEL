@@ -225,9 +225,7 @@ Com a integração do proxy ativa, `/entrar <código>` acessa salas por código 
 | `/pel criar <nome> <min> <max> story` | Inicia o setup de um mapa de história. |
 | `/pel deletar <nome>` | Remove um mapa normal ou de história. |
 | `/pel setlobby` | Define o lobby do servidor PEL. |
-| `/pel slimewand` | Entrega a ferramenta de seleção para exportação. |
 | `/pel setpreview` | Define a posição de preview do mapa. |
-| `/pel setjump` / `/pel deljump` | Cria ou remove um jump pad. |
 | `/pel build` | Alterna o modo de construção administrativa. |
 | `/pel iniciar` | Força o início da sala atual. |
 | `/pel npc` | Cria o NPC de partidas normais. |
@@ -236,17 +234,17 @@ Com a integração do proxy ativa, `/entrar <código>` acessa salas por código 
 | `/pel removenpc story` | Remove o NPC do modo história. |
 | `/pel holograma nivel` | Cria o ranking de níveis. |
 | `/pel holograma vitorias` | Cria o ranking de vitórias. |
-| `/pel holograma remover <nivel|vitorias>` | Remove um ranking. |
+| `/pel holograma remover <nivel - vitorias>` | Remove um ranking. |
 | `/pel load <mundo>` | Carrega uma pasta de mundo e teleporta o administrador. |
 | `/pel tp <mundo>` | Teleporta para um mundo carregado. |
 | `/pel unload <mundo>` | Salva e descarrega um mundo vazio. |
-| `/pel add <moeda|ouro|xp> <jogador> <quantia>` | Adiciona saldo ou XP. |
-| `/pel set <moeda|ouro|xp|nivel> <jogador> <valor>` | Define um valor do perfil. |
+| `/pel add <moeda - ouro - xp> <jogador> <quantia>` | Adiciona saldo ou XP. |
+| `/pel set <moeda -  ouro - xp - nivel> <jogador> <valor>` | Define um valor do perfil. |
 | `/pel crate` / `/pel removecrate` | Cria ou remove uma caixa misteriosa. |
 | `/pel givekey <jogador> <quantia>` | Entrega chaves de caixa. |
 | `/pel spraygive <arquivo> [jogador]` | Entrega um spray PNG ou GIF. |
-| `/pel hb` | Habilita ou desabilita as filas. |
-| `/pel reload` | Recarrega as configurações principais. |
+| `/pel hb` | Habilita ou desabilita as frrilas. |
+| `/pel reload` | Recaega as configurações principais. |
 
 Comandos de teste, depuração e manutenção também existem, mas devem ser utilizados somente em ambiente administrativo.
 
