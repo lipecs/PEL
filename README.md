@@ -4,13 +4,30 @@
   Minigame completo de <strong>Polícia e Ladrão</strong>, desenvolvido por Lipe e inspirado na clássica série de <strong>Polícia e Ladrão do AuthenticGames</strong>.
 </p>
 
-
 <p align="center">
   <img alt="Java 17" src="https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
   <img alt="Paper" src="https://img.shields.io/badge/Paper-3C3C3C?style=for-the-badge&logo=paper&logoColor=white">
   <img alt="Maven" src="https://img.shields.io/badge/Maven-3-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white">
   <img alt="MySQL e SQLite" src="https://img.shields.io/badge/Banco-MySQL%20%7C%20SQLite-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 </p>
+
+<!--
+===============================================================================
+VÍDEO 1 - TRAILER PRINCIPAL
+Coloque aqui o melhor vídeo de apresentação do plugin.
+
+O GitHub não reproduz vídeos diretamente no README. Use uma imagem como capa
+clicável e troque os dois caminhos abaixo:
+
+<p align="center">
+  <a href="COLE_AQUI_O_LINK_DO_VIDEO">
+    <img src="docs/images/trailer-capa.png" alt="Trailer do PELPlugin" width="850">
+  </a>
+</p>
+
+Sugestão: vídeo de 1 a 2 minutos mostrando lobby, partida, kits e cosméticos.
+===============================================================================
+-->
 
 ## Sobre o projeto
 
@@ -43,6 +60,17 @@ O projeto não se limita à partida principal: ele possui múltiplos modos de jo
 - API HTTP opcional para integração com loja web.
 - Webhooks opcionais para eventos no Discord.
 
+<!--
+===============================================================================
+FOTO OU GIF 1 - GAMEPLAY PRINCIPAL
+Mostre uma partida acontecendo, de preferência com policiais, ladrões e HUD.
+
+<p align="center">
+  <img src="docs/images/gameplay-principal.gif" alt="Gameplay do PELPlugin" width="850">
+</p>
+===============================================================================
+-->
+
 ## Modos de jogo
 
 | Modo | Funcionamento |
@@ -58,6 +86,18 @@ O projeto não se limita à partida principal: ele possui múltiplos modos de jo
 | **Dupla Dinâmica** | Duplas jogam com vida compartilhada. |
 | **Caos Absoluto** | Uma roleta ativa eventos diferentes durante a partida. |
 
+<!--
+===============================================================================
+FOTOS 2 E 3 - MODOS DE JOGO
+Use duas capturas de modos diferentes. Troque os caminhos e remova este comentário.
+
+<p align="center">
+  <img src="docs/images/modo-vip.png" alt="Modo VIP" width="420">
+  <img src="docs/images/modo-caos.png" alt="Modo Caos Absoluto" width="420">
+</p>
+===============================================================================
+-->
+
 ## Kits
 
 ### Ladrões
@@ -69,6 +109,17 @@ O projeto não se limita à partida principal: ele possui múltiplos modos de jo
 `Policial Padrão`, `Médico`, `Trapper`, `Taser`, `K-9`, `Rastreador`, `Escudo`, `Destruidor`, `Scanner`, `Rede` e `Pulso EMP`.
 
 Cada kit possui habilidade e balanceamento próprios. O desbloqueio e a seleção ficam salvos no perfil do jogador.
+
+<!--
+===============================================================================
+FOTO OU GIF 4 - KITS
+Mostre o menu de seleção e, se possível, uma habilidade sendo utilizada.
+
+<p align="center">
+  <img src="docs/images/kits.gif" alt="Kits e habilidades" width="850">
+</p>
+===============================================================================
+-->
 
 ## Progressão e perfil
 
@@ -100,6 +151,18 @@ O plugin possui uma camada de personalização integrada ao perfil:
 
 Cosméticos podem ser desativados individualmente pelas preferências do jogador e não alteram as regras competitivas da partida.
 
+<!--
+===============================================================================
+FOTOS 5 E 6 - PERFIL E COSMÉTICOS
+Uma captura do perfil/progressão e outra da loja ou de um efeito em ação.
+
+<p align="center">
+  <img src="docs/images/perfil.png" alt="Perfil e progressão" width="420">
+  <img src="docs/images/cosmeticos.png" alt="Loja de cosméticos" width="420">
+</p>
+===============================================================================
+-->
+
 ## Salas personalizadas
 
 O criador de uma sala personalizada pode definir:
@@ -113,6 +176,17 @@ O criador de uma sala personalizada pode definir:
 - escolha manual ou sorteio balanceado dos times.
 
 Cada sala recebe um código para entrada pelo comando global `/entrar <código>`. O dono organiza os times e decide quando iniciar. Por padrão, partidas personalizadas não concedem estatísticas nem recompensas.
+
+<!--
+===============================================================================
+FOTO 7 - SALA PERSONALIZADA
+Mostre a GUI de criação ou o gerenciamento dos times da sala.
+
+<p align="center">
+  <img src="docs/images/sala-personalizada.png" alt="Configuração de sala personalizada" width="850">
+</p>
+===============================================================================
+-->
 
 ## Modo história
 
@@ -128,6 +202,19 @@ O modo história utiliza sessões independentes e conduz o jogador por uma sequ�
 
 O editor inclui regiões para esconderijo, central, esgotos, pátio, porto e chefe, além de partículas de visualização durante o setup.
 
+<!--
+===============================================================================
+VÍDEO 2 - MODO HISTÓRIA
+Use uma thumbnail com link para um vídeo curto mostrando objetivos e o chefe.
+
+<p align="center">
+  <a href="COLE_AQUI_O_LINK_DO_VIDEO_DO_MODO_HISTORIA">
+    <img src="docs/images/story-capa.png" alt="Modo história do PELPlugin" width="850">
+  </a>
+</p>
+===============================================================================
+-->
+
 ## Mapas e instâncias
 
 O PEL utiliza o **Advanced SlimeWorldManager (ASWM)** para exportar templates e criar uma cópia temporária do mapa para cada partida. Essa arquitetura oferece:
@@ -139,6 +226,17 @@ O PEL utiliza o **Advanced SlimeWorldManager (ASWM)** para exportar templates e 
 - proteção do mapa original contra alterações da partida.
 
 O setup é feito dentro do jogo com itens próprios para posições, spawns, regiões, objetivos, preview e jump pads.
+
+<!--
+===============================================================================
+FOTO OU GIF 8 - SETUP DE MAPAS
+Mostre os itens de setup, as partículas das regiões ou a exportação do template.
+
+<p align="center">
+  <img src="docs/images/setup-mapas.gif" alt="Criação de mapas no PELPlugin" width="850">
+</p>
+===============================================================================
+-->
 
 ## Tecnologias
 
@@ -156,7 +254,7 @@ O setup é feito dentro do jogo com itens próprios para posições, spawns, reg
 ## Requisitos
 
 - Java 17.
-- Compatível com Paper da versão 1.8.9 até a 1.21.1.
+- Servidor Paper 1.18.2. O acesso de clientes entre 1.8.9 e 1.21.1 depende de ViaVersion e ViaBackwards.
 - ProtocolLib.
 - Maven 3.8 ou superior para compilar.
 
@@ -240,12 +338,12 @@ Com a integração do proxy ativa, `/entrar <código>` acessa salas por código 
 | `/pel tp <mundo>` | Teleporta para um mundo carregado. |
 | `/pel unload <mundo>` | Salva e descarrega um mundo vazio. |
 | `/pel add <moeda - ouro - xp> <jogador> <quantia>` | Adiciona saldo ou XP. |
-| `/pel set <moeda -  ouro - xp - nivel> <jogador> <valor>` | Define um valor do perfil. |
+| `/pel set <moeda - ouro - xp - nivel> <jogador> <valor>` | Define um valor do perfil. |
 | `/pel crate` / `/pel removecrate` | Cria ou remove uma caixa misteriosa. |
 | `/pel givekey <jogador> <quantia>` | Entrega chaves de caixa. |
 | `/pel spraygive <arquivo> [jogador]` | Entrega um spray PNG ou GIF. |
-| `/pel hb` | Habilita ou desabilita as frrilas. |
-| `/pel reload` | Recaega as configurações principais. |
+| `/pel hb` | Habilita ou desabilita as filas. |
+| `/pel reload` | Recarrega as configurações principais. |
 
 Comandos de teste, depuração e manutenção também existem, mas devem ser utilizados somente em ambiente administrativo.
 
